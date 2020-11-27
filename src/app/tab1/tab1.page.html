@@ -13,5 +13,14 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card *ngFor="let user of users">
+
+  <ion-card-header>
+    <ion-card-subtitle>{{user.id}}</ion-card-subtitle>
+    <ion-card-title>{{user.name}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    {{user.email}} - {{user.username}}
+  </ion-card-content>
+</ion-card>
 </ion-content>

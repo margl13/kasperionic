@@ -13,5 +13,14 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-card *ngFor="let post of posts">
+
+    <ion-card-header>
+      <ion-card-subtitle>{{post.id}}</ion-card-subtitle>
+      <ion-card-title>{{post.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{post.body}}
+    </ion-card-content>
+  </ion-card>
 </ion-content>
